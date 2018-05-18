@@ -22,6 +22,7 @@
  *    'Sun, 17 May 1998 03:00:00 GMT+01' => Date()
  */
 function parseDataFromRfc2822(value) {
+  return Date.parse(value);
     throw new Error('Not implemented');
 }
 
@@ -83,7 +84,7 @@ function timeSpanToString(startDate, endDate) {
 /**
  * Возвращает угол (в радианах) между часовыми стрелками двух аналоговых часов для указанного времени по Гринвичу.
  * При возникновениии проблем, посмотрите : https://en.wikipedia.org/wiki/Clock_angle_problem
- * 
+ *
  * @param {date} date
  * @return {number}
  *
